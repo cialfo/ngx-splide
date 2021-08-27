@@ -1,7 +1,7 @@
 <div #splideElement class="splide" [ngClass]="containerClass">
     <div class="splide__track">
         <div class="splide__list">
-            <div class="splide__slide" *ngFor="let slide of slides;">
+            <div class="splide__slide" *ngFor="let slide of slides; trackBy: trackByIndex">
                 <ng-template *ngIf="slide.slideContent" [ngTemplateOutlet]="slide.slideContent"></ng-template>
             </div>
         </div>

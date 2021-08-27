@@ -261,6 +261,10 @@ export class NgxSplideComponent implements AfterViewInit, OnChanges, OnDestroy
         ;
     }
 
+    trackByIndex(index: number) {
+        return index;
+    }
+
     ngOnDestroy()
     {
         if (this.splide) {
