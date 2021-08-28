@@ -65,13 +65,8 @@ export class NgxSplideComponent implements AfterViewInit, OnChanges, OnDestroy
         const slidesSubscription = this.slides.changes
             .subscribe((list: QueryList<NgxSplideSlideComponent>) => {
                 this.cdr.detectChanges();
-
-                setTimeout(() => {
-                    this.splide.destroy();
-                    this.splide.mount();
-
-                    this.addEventListeners();
-                });
+                this.splide.refresh();
+                this.cdr.detectChanges();
             })
         ;
 
@@ -261,7 +256,7 @@ export class NgxSplideComponent implements AfterViewInit, OnChanges, OnDestroy
         ;
     }
 
-    trackByIndex(index: number) {
+    trackByIndex(index: number, slide: any) {
         return index;
     }
 
