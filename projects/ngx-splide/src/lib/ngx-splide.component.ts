@@ -50,6 +50,8 @@ export class NgxSplideComponent implements AfterViewInit, OnChanges, OnDestroy
 
     @ContentChildren(NgxSplideSlideComponent) public slides: QueryList<NgxSplideSlideComponent>;
 
+    oldSlidesCount: number | null = null;
+
     @ViewChild('splideElement') splideElement: ElementRef;
     protected splide;
 
@@ -64,9 +66,20 @@ export class NgxSplideComponent implements AfterViewInit, OnChanges, OnDestroy
 
         const slidesSubscription = this.slides.changes
             .subscribe((list: QueryList<NgxSplideSlideComponent>) => {
-                this.cdr.detectChanges();
-                this.splide.refresh();
-                this.cdr.detectChanges();
+                if (this.oldSlidesCount != null && this.oldSlidesCount  > this.slides.length) {
+                    setTimeout(() => {
+                        this.splide.destroy();
+                        this.cdr.detectChanges();
+                        this.splide.mount();
+                        this.addEventListeners();
+                    });
+                } else {
+                    this.cdr.detectChanges();
+                    this.splide.refresh();
+                    this.cdr.detectChanges();
+                }
+                
+                this.oldSlidesCount = this.slides.length;
             })
         ;
 
