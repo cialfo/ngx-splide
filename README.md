@@ -5,6 +5,10 @@
 
 [Splide.js](https://splidejs.com/) integration to angular
 
+### Changes done after forking
+1. Replace BrowserModule with CommonModule in ngx-splide.module.ts
+2. The carousel was getting recreated on each addition/removal of slide. Now it only gets recreated on deletion of a slide
+
 ## Demo
 
 https://justcommunication-ru.github.io/ngx-splide/
