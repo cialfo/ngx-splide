@@ -226,6 +226,11 @@ To make changes to this project
 - make your changes to the branch.
 - try & validate changes in the demo project (ngx-splide-app)
 - if everything works as expected, merge your branch into the master branch.
+### Steps to use locally:
+  - Run command `npm build`
+  - cd to `dist/ngx-splide`
+  - Run command `npm pack`. This will create a tar.gz or tgz file
+  - In the project where you want to install it locally, run `npm install PATH_TO_GZIP_FILE`
 
 ## Publishing to NPM
 Before you can start using the package with the latest changes, you need to publish the package to NPM with a new version. To publish a new version of the package:
