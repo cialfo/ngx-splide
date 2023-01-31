@@ -233,7 +233,7 @@ Before you can start using the package with the latest changes, you need to publ
 - Run `ng build -c production` in the root directory
 - Go to `dist/ngx-splide`
 - Run `npm pack`
-- Login to Cialfo NPM account using `npm adduser` command (find credentials on NPM)
+- Login to Cialfo NPM account using `npm adduser` command (find credentials in vault)
 - Run `npm publish --access public`
 - Go the NPM page of the package https://www.npmjs.com/package/@cialfo/ngx-splide to verify the latest version is published.
 - update the version of the `ngx-splide` package in the `package.json` file of the project where the library is used.
