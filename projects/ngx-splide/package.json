@@ -1,5 +1,5 @@
 {
-    "name": "@ahmedasif/ngx-splide",
+    "name": "@cialfo/ngx-splide",
     "version": "0.0.17",
     "description": "Splide.js integration with angular",
     "keywords": [
@@ -12,7 +12,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ahmedasif1/ngx-splide"
+        "url": "https://github.com/cialfo/ngx-splide"
     },
     "dependencies": {
         "tslib": "^2.0.0"

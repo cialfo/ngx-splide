@@ -218,3 +218,22 @@ Will produce:
     ...
 </div>
 ```
+
+# Development
+
+To make changes to this project
+- take a branch out of the master branch.
+- make your changes to the branch.
+- try & validate changes in the demo project (ngx-splide-app)
+- if everything works as expected, merge your branch into the master branch.
+
+## Publishing to NPM
+Before you can start using the package with the latest changes, you need to publish the package to NPM with a new version. To publish a new version of the package:
+- Go to `projects/ngx-splide` and bump the `version` number in the `package.json` file.
+- Run `ng build -c production` in the root directory
+- Go to `dist/ngx-splide`
+- Run `npm pack`
+- Login to Cialfo NPM account using `npm adduser` command (find credentials on NPM)
+- Run `npm publish --access public`
+- Go the NPM page of the package https://www.npmjs.com/package/@cialfo/ngx-splide to verify the latest version is published.
+- update the version of the `ngx-splide` package in the `package.json` file of the project where the library is used.
